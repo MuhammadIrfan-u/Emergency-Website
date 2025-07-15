@@ -1,0 +1,101 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Emergency Page
+        link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap", rel="stylesheet")
+        style.
+            body {
+                margin: 0;
+                font-family: 'Poppins', sans-serif;
+            }
+            
+            nav {
+                background-color: white;
+                color: #2e7d32;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .logo img {
+                height: 40px;
+            }
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+            }
+            .nav-links a {
+                color: #2e7d32;
+                text-decoration: none;
+                font-weight: 500;
+                position: relative;
+                transition: all 0.3s ease;
+            }
+            .nav-links a::after {
+                content: '';
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                height: 2px;
+                width: 0%;
+                background: #81c784;
+                transition: width 0.3s ease;
+            }
+            .nav-links a:hover {
+                color: #1b5e20;
+            }
+            .nav-links a:hover::after {
+                width: 100%;
+            }
+
+            .nav-button {
+                    background: none;
+                    border: none;
+                    color: #2e7d32;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    position: relative;
+                    transition: all 0.3s ease;
+                    padding: 0;
+                    }
+
+                    .nav-button::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    height: 2px;
+                    width: 0%;
+                    background: #81c784;
+                    transition: width 0.3s ease;
+                    }
+
+                    .nav-button:hover {
+                    color: #1b5e20;
+                    }
+
+                    .nav-button:hover::after {
+                    width: 100%;
+                    }
+
+
+    body
+
+        nav
+            .logo
+                img(src="https://fontmeme.com/permalink/240709/d4cf4f7b9d3d2cd2baed9e2a7a56e055.png", alt="Emergency Logo")
+            .nav-links
+                a(href="/Home") Home
+                a(href="/Police") Work
+                button#history.nav-button(type="button") History
+                a(href="/About") About
+                a(href="#") Logout
+
+        script(src='/Scripts/History.js')

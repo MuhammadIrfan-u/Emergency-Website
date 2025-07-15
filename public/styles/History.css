@@ -1,0 +1,63 @@
+ body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #ffffff;
+        color: #2e7d32;
+      }
+
+.history-header {
+display: flex;
+align-items: center;
+padding: 2rem;
+background-color: #e8f5e9;
+border-bottom: 2px solid #c8e6c9;
+}
+
+.history-header img {
+width: 120px;
+height: 120px;
+border-radius: 50%;
+margin-right: 2rem;
+border: 3px solid #a5d6a7;
+}
+
+.officer-info h2 {
+margin: 0 0 0.5rem 0;
+font-size: 2rem;
+color: #1b5e20;
+}
+
+.officer-info p {
+margin: 0.2rem 0;
+font-size: 1.1rem;
+}
+
+.history-section {
+padding: 2rem;
+}
+
+.history-entry {
+background-color: #f1f8e9;
+padding: 1rem 1.5rem;
+border-left: 4px solid #66bb6a;
+margin-bottom: 1rem;
+border-radius: 8px;
+box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+transition: transform 0.2s ease;
+}
+
+.history-entry:hover {
+transform: translateY(-3px);
+box-shadow: 0 4px 10px rgba(0,128,0,0.1);
+}
+
+.history-entry h4 {
+margin: 0 0 0.3rem 0;
+color: #388e3c;
+}
+
+.history-entry p {
+margin: 0;
+font-size: 0.95rem;
+color: #2e7d32;
+}

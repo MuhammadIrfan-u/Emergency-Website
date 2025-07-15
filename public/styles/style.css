@@ -1,0 +1,256 @@
+/* Reset and Base Styles */
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+
+.hidden{
+  display: none;
+}
+
+
+/* Main Content Layout */
+body {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px; /* Offset for fixed header */
+}
+
+.main-content-wrapper {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 10px); /* Full height minus header */
+  overflow: hidden;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  width: 250px;
+  background-color: rgb(50, 51, 63);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#sidebar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#sidebar .logo img {
+  width: 110px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+
+#sidebar .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Button Container */
+#button-container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: calc(100% - 40px); /* Account for padding */
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #353333, #3b3535);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25),
+              0 4px 8px rgba(0, 0, 0, 0.15);
+  animation: shakeY 7s ease-in-out;
+}
+
+.button-row button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+/* Map Styles */
+#map {
+  flex: 1;
+  height: 100%;
+}
+
+/* Loading Overlay */
+#loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#loading-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.loader {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: spin 1.2s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes shakeY {
+  0%   { transform: translateY(0); }
+  15%  { transform: translateY(-10px); }
+  30%  { transform: translateY(10px); }
+  45%  { transform: translateY(-10px); }
+  60%  { transform: translateY(10px); }
+  75%  { transform: translateY(-6px); }
+  90%  { transform: translateY(6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+/* Button Colors */
+.accept-btn {
+  background-color: #28a745;
+  color: white;
+}
+.accept-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: white;
+}
+.reject-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+
+/* Help Button Styles */
+.help-button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  background-color: #28a745; /* Green color */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 80%; /* Responsive width */
+  max-width: 180px; /* Maximum width */
+  text-align: center;
+  z-index: 100; /* Ensure it stays above other elements */
+}
+
+/* Hover Effects */
+#help-button:hover {
+  background-color: #218838; /* Darker green */
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Active/Pressed Effect */
+#help-button:active {
+  transform: translateX(-50%) scale(0.98);
+}
+
+/* Pulse Animation (optional) */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
+}
+
+/* Add this class via JavaScript for attention-grabbing effect */
+.pulse-effect {
+  animation: pulse 1.5s infinite;
+}
+
+#Start-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 12px 24px;
+  background-color: #dc3545; /* Red color */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 70%;
+  max-width: 180px;
+  text-align: center;
+  z-index: 100;
+}
+

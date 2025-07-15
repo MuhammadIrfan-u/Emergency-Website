@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Officer History
+        link(rel="stylesheet", href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap")
+        link(rel="stylesheet", href="/styles/History.css")
+
+    body
+        include _header
+
+        section.history-header
+            img(src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png", alt="Officer Picture")
+            .officer-info
+                h2 #{Name}
+                p Email: #{Email}
+                p Rank: #{Rank}
+                p Shift: #{Shift}
+
+        section.history-section
+            each history in History
+                .history-entry
+                    h4 #{history.location} - #{history.Date}
+                    p #{history.Description}

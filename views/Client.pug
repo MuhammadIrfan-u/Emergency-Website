@@ -1,0 +1,40 @@
+doctype html
+html 
+  head 
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0') 
+    title Emergency
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css')
+    link(rel='stylesheet' href='https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css')
+    link(rel='stylesheet' href='/styles/style.css')
+
+  body
+
+    include _header
+
+  // Main Layout Wrapper - now with header offset
+  .main-content-wrapper
+    // Sidebar
+    #sidebar
+      .logo
+        img(src='/logo.png', alt='Logo')
+        span.close-btn(onclick="document.getElementById('sidebar').classList.add('hidden')") &times;
+
+
+        button#help.help-button Help
+        button#Search.help-button.hidden Searching
+
+
+
+
+    // Map Section
+    #map
+      
+        
+
+
+  // Leaflet & Socket Scripts
+  script(src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js")
+  script(src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/Use.js")

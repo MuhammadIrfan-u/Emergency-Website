@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Emergency Page
+
+    // Google Font
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap", rel="stylesheet")
+
+    // Leaflet CSS
+    link(rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css")
+    link(rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css")
+
+    link(rel="stylesheet" href="/styles/style.css")
+
+  body
+    // Include Header
+    include _header
+
+    // Main Layout Wrapper - now with header offset
+    .main-content-wrapper
+      // Sidebar
+      #sidebar
+        .logo
+          img(src='/logo.png', alt='Logo')
+          span.close-btn(onclick="document.getElementById('sidebar').classList.add('hidden')") &times;
+        h2 Officer Panel
+        p
+
+        // Button Container
+        #button-container
+
+
+      // Map Section
+      #map
+        button#Start-button Start
+
+    // Loading Overlay
+    #loading-overlay
+      .loader
+        img(src='/logo.png', alt='Loading', class='loader-image')
+
+    // Leaflet & Socket Scripts
+    script(src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js")
+    script(src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js")
+    script(src="/socket.io/socket.io.js")
+    script(src="/Emergent.js")

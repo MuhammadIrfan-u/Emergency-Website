@@ -1,0 +1,48 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Emergency
+        link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css')
+        link(rel='stylesheet' href='https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css')
+        link(rel='stylesheet' href='/styles/Home.css')
+
+    body
+
+
+        include _header
+
+        section.section
+            h1 Emergency Situation
+            p Discover the harmony of nature and innovation. At GreenSite, we believe in a sustainable future where eco-conscious choices meet everyday inspiration.
+
+        .verse
+            | وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ ۖ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ
+
+        .card-wrapper
+            .card-container#cardContainer
+                .card.active
+                    img(src="logo.png", alt="Nature")
+                    p Nature's peace flows into you.
+                .card
+                    img(src="https://source.unsplash.com/300x200/?eco", alt="Eco")
+                    p Eco-friendly choices matter.
+                .card
+                    img(src="https://source.unsplash.com/300x200/?green", alt="Green")
+                    p Green is the color of life.
+
+        section.quote
+            p
+            | “
+            span The Earth is what we all have in common.
+            | ” — Wendell Berry
+
+        footer
+            | © 2025 GreenSite — Rooted in Nature 🌿
+
+
+        script(src='/Scripts/Home.js')
+
+
+

@@ -1,0 +1,133 @@
+body {
+  background: linear-gradient(to bottom, #f3fdf3, #e0f2e9);
+  color: #2e7d32;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section Heading */
+.section {
+  text-align: center;
+  padding: 3rem 2rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1b5e20;
+}
+
+.section p {
+  font-size: 1.1rem;
+  color: #4e684e;
+  line-height: 1.6;
+}
+
+
+/* Cards */
+.card-wrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.card-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding: 2rem;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.card {
+  min-width: 300px;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 1rem;
+  font-weight: 500;
+  color: #388e3c;
+}
+
+.card.active {
+  transform: scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border: 2px solid #66bb6a;
+}
+
+/* Quote Section */
+.quote {
+  background-color: #ecf5ec;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #2e7d32;
+  margin-top: 2rem;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.03);
+}
+
+.quote span {
+  font-style: italic;
+  color: #388e3c;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+}
+
+   .verse {
+      text-align: center;
+      font-size: 1.6rem;
+      padding: 2rem 1rem 0;
+      color: #2e7d32;
+      font-weight: 600;
+      direction: rtl;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #2e7d32;
+      width: 0;
+      margin: 0 auto;
+      animation: typing 7s steps(60, end) forwards, blink 0.75s step-end infinite;
+      max-width: 90%;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent; }
+      50% { border-color: #2e7d32; }
+    }

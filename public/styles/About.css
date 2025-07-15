@@ -1,0 +1,76 @@
+  .about-section {
+    background-color: #ffffff;
+    color: #2e7d32;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .about-container {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideUp 1s ease forwards;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 3rem auto;
+    max-width: 1000px;
+    opacity: 0;
+    animation: fadeSlideUp 1s ease 0.5s forwards;
+  }
+
+  .card {
+    background-color: #e8f5e9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.2);
+  }
+
+  .card h3 {
+    color: #1b5e20;
+    margin: 1rem 0 0.5rem;
+  }
+
+  .card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid #a5d6a7;
+    background-color: white;
+    padding: 5px;
+  }
+
+  @keyframes fadeSlideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Emergency
+    link(rel='stylesheet' href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css')
+    link(rel='stylesheet' href='https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css')
+    link(rel='stylesheet' href='/styles/style.css')
+
+  body
+
+
+    main.main
+      .login-form
+        h2.heading-secondary.ma-bt-lg Log into your account
+        form.form
+          .form__group
+            label.form__label(for='email') Email address
+            input#email.form__input(type='email', placeholder='you@example.com', required)
+          .form__group.ma-bt-md
+            label.form__label(for='password') Password
+            input#password.form__input(type='password', placeholder='••••••', required, minlength='8')
+          .form__group
+            button#Login.btn.btn--green Login
+
+    script(src='/login.js')     
